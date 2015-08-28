@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cf83b29008994dff7955ddb11e3d5449",
+    "hash": "19b4820e39f429d6126be7898166f5d6",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -158,6 +158,44 @@
                 "utils"
             ],
             "time": "2015-07-23 00:54:12"
+        },
+        {
+            "name": "dg/twitter-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dg/twitter-php.git",
+                "reference": "27f2e95573756bf85e8972c468c79841841ef81c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dg/twitter-php/zipball/27f2e95573756bf85e8972c468c79841841ef81c",
+                "reference": "27f2e95573756bf85e8972c468c79841841ef81c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                }
+            ],
+            "description": "Small and easy Twitter library for PHP",
+            "homepage": "https://github.com/dg/twitter-php",
+            "keywords": [
+                "oauth",
+                "twitter"
+            ],
+            "time": "2015-01-18 11:33:28"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2967,7 +3005,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "dg/twitter-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
