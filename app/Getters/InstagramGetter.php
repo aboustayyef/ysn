@@ -16,7 +16,7 @@ class InstagramGetter
 	public function getList($tag="youstink" , $howmany=10){
 
 		$this->posts = $this->client->getTagMedia($tag, $howmany);
-		return $this->posts;
+		return $this->posts->data;
 	}
 
 }

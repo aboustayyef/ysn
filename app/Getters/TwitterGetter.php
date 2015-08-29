@@ -21,7 +21,7 @@ class TwitterGetter
 				return "Exception: $e";
 			}
 			
-			return $rawTweets;	
+			return $rawTweets->statuses;	
 	}
 
 }

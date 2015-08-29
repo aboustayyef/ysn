@@ -1,7 +1,7 @@
 <?php 
 
 namespace App\Transformers;
-
+use Carbon\Carbon;
 
 /**
  * Takes a raw tweet object and returns 
@@ -10,32 +10,32 @@ class InstagramTransformer extends _Transformer{
 
 	
 	function getPostId(){
-		return "test";
+		return $this->rawPost->link;
 	}
 	
 	function getImageSource(){
-		return "test";
+		return $this->rawPost->images->low_resolution->url;
 	}
 	
 	function getDatePublished(){
-		return "test";
+		return Carbon::createFromTimeStamp($this->rawPost->created_time);
 	}
 	
 	function getHtmlContent(){
-		return "test";
+		return $this->rawPost->caption->text;
 	}
 	
 	function getUserProfilePic(){
-		return "test";
+		return $this->rawPost->caption->from->profile_picture;
 	}
 	
 	function getUserName(){
-		return "test";
+		return $this->rawPost->caption->from->username;
 	}
 	
 
 	function getProvider(){
-		return "twitter";
+		return "instagram";
 	}
 
 
