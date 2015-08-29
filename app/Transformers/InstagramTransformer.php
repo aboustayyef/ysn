@@ -6,20 +6,39 @@ namespace App\Transformers;
 /**
  * Takes a raw tweet object and returns 
  */
-class TwitterTransformer{
+class InstagramTransformer extends _Transformer{
 
-
-	protected $rawTweet;
-
-	public function __construct($tweet){
-		$this->rawTweet = $tweet;
-
-		// manage Raw Twitter Object
-		$retweeted = isset($tweet->retweeted_status) ? 1:0 ;
-		$isreply = isset($tweet->in_reply_to_status_id) ? 1:0 ;
-		$canonicalTweet = $retweeted? $tweet->retweeted_status : $tweet;
-		$canonicalUser = $canonicalTweet->user;
+	
+	function getPostId(){
+		return "test";
 	}
+	
+	function getImageSource(){
+		return "test";
+	}
+	
+	function getDatePublished(){
+		return "test";
+	}
+	
+	function getHtmlContent(){
+		return "test";
+	}
+	
+	function getUserProfilePic(){
+		return "test";
+	}
+	
+	function getUserName(){
+		return "test";
+	}
+	
+
+	function getProvider(){
+		return "twitter";
+	}
+
+
 
 }
 
