@@ -8,13 +8,31 @@ use Carbon\Carbon;
  */
 class InstagramTransformer extends _Transformer{
 
+	protected $image = null, $image_height = 0, $image_width = 0;
 	
 	function getPostId(){
 		return $this->rawPost->link;
 	}
 	
 	function getImageSource(){
-		return $this->rawPost->images->low_resolution->url;
+		$this->image = $this->rawPost->images->low_resolution->url;
+		if ($this->image) {
+			//have image, check dimensions
+			$FastImageSize = new \FastImageSize\FastImageSize();
+			$imageSize = $FastImageSize->getImageSize($this->image);
+			$this->image_height = $imageSize['height'];
+			$this->image_width = $imageSize['width'];
+		}
+	
+		return $this->image;
+	}
+
+	function getImageHeight(){
+		return $this->image_height;
+	}
+
+	function getImageWidth(){
+		return $this->image_width;
 	}
 	
 	function getDatePublished(){

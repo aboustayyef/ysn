@@ -8,6 +8,7 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "cosenary/instagram": "^2.3",
+        "marc1706/fast-image-size": "1.*",
         "dg/twitter-php": "dev-master"
     },
     "require-dev": {

@@ -9,7 +9,7 @@ use App\Parsers\TweetContentParser;
  */
 class TwitterTransformer extends _Transformer{
 
-	protected $tweet, $retweeted, $canonicalTweet, $canonicalUser;
+	protected $tweet, $retweeted, $canonicalTweet, $canonicalUser, $image = null, $image_height = 0, $image_width = 0;
 
 	public function __construct($rawPost){
 		
@@ -32,9 +32,23 @@ class TwitterTransformer extends _Transformer{
 	function getImageSource(){
 		
 		if (isset($this->canonicalTweet->entities->media[0]->media_url)){
-			$media = $this->canonicalTweet->entities->media[0]->media_url;
-		
+			$this->image = $this->canonicalTweet->entities->media[0]->media_url;
+			
+			// check dimensions
+			$FastImageSize = new \FastImageSize\FastImageSize();
+			$imageSize = $FastImageSize->getImageSize($this->image);
+			$this->image_height = $imageSize['height'];
+			$this->image_width = $imageSize['width'];
+			return $this->image;
 		}
+	}
+
+	function getImageHeight(){
+		return $this->image_height;
+	}
+
+	function getImageWidth(){
+		return $this->image_width;
 	}
 	
 	function getDatePublished(){

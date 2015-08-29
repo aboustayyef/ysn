@@ -20,6 +20,8 @@ abstract class _Transformer{
 
 	abstract function getPostId();
 	abstract function getImageSource();
+	abstract function getImageWidth();
+	abstract function getImageHeight();
 	abstract function getDatePublished();
 	abstract function getHtmlContent();
 	abstract function getUserProfilePic();
@@ -32,6 +34,8 @@ abstract class _Transformer{
 		$this->finalPost = [
 			'post_id'			=> 	$this->getPostId(),
 			'image_source'		=>	$this->getImageSource(),
+			'image_height'		=>	$this->getImageHeight(),
+			'image_width'		=>	$this->getImageWidth(),
 			'date_published'	=>	$this->getDatePublished(),
 			'html_content'		=>	$this->getHtmlContent(),
 			'user_profile_pic'	=>	$this->getUserProfilePic(),

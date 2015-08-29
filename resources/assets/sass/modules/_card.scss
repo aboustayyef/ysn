@@ -1,0 +1,44 @@
+.card{
+	
+	background-color:white;
+	border:1px solid silver;
+	overflow:hidden;
+	border-radius:5px;
+	margin-bottom:10px;
+
+	width:300px; //2px border and 298 active;
+	.imgcontainer{
+		background-color:#CFE0CB;
+	}
+	img{
+		max-width:100%;
+		background-color:#CFE0CB;
+	}
+	p{
+		padding:10px;
+	}
+
+	.userMeta{
+		padding:5px;
+		font-size:12px;
+		overflow:auto;
+	}
+
+	.userImage, .userInfo, .provider{
+		display:inline-block;
+	}
+
+	.userImage{
+		float:left;
+	}
+	
+	.userInfo{
+		margin-left:10px;
+	}
+
+	.provider{
+		float:right;
+	}
+
+
+}
