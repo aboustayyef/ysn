@@ -9,8 +9,10 @@ $posts = \Cache::get('lastThirtyPosts');
 
 ?>
 
-<div class="posts js-masonry" data-masonry-options='{ "itemSelector": ".card", "columWidth": 300, "gutter":10 }'>  
+<div class="posts js-masonry" data-masonry-options='{ "itemSelector": ".cardsWrapper", "columWidth": 300, "gutter":10 }'>  
    
+	@include('partials.blogs_and_videos')
+
     @foreach($posts as $post)
         @include('partials.card')
     @endforeach

@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "cosenary/instagram": "^2.3",
         "marc1706/fast-image-size": "1.*",
-        "dg/twitter-php": "dev-master"
+        "dg/twitter-php": "dev-master",
+        "alaouy/youtube": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

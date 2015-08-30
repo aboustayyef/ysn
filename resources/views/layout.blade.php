@@ -16,6 +16,7 @@
             @include('partials.footer')
         </div>
     </div>
+
 </div>
 
 

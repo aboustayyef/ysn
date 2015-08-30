@@ -98,6 +98,8 @@ h3 {
   background: none; }
 
 @media (min-width: 48em) {
+  .beirutspring {
+    display: block; }
   .content {
     padding: 2em 3em 0;
     margin-left: 25%; }
@@ -118,6 +120,12 @@ h3 {
   border-radius: 5px;
   margin-bottom: 10px;
   width: 300px; }
+  .card h2.sectionhead {
+    background-color: #CEE0C3;
+    margin: 0;
+    padding: 10px;
+    color: #385228;
+    font-size: 120%; }
   .card .imgcontainer {
     background-color: #CFE0CB; }
   .card img {
@@ -144,5 +152,61 @@ a.primaryButton {
   border: 1px solid silver;
   border-radius: 3px;
   color: #385228; }
+
+#blogposts ul {
+  padding: 8px;
+  margin: 0;
+  font-size: 14px; }
+
+#blogposts li {
+  list-style-type: none; }
+  #blogposts li:last-child h4 {
+    border: none; }
+
+#blogposts h3, #blogposts h4 {
+  margin: 0;
+  margin-top: 10px; }
+
+#blogposts h4 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d1d1d1;
+  padding-bottom: 10px;
+  color: #777;
+  text-transform: uppercase;
+  font-size: 12px; }
+
+#videos ul {
+  padding: 8px;
+  margin: 0;
+  font-size: 14px; }
+
+#videos li {
+  overflow: auto;
+  list-style-type: none;
+  margin-bottom: 10px; }
+  #videos li:last-child h4 {
+    border: none; }
+
+#videos h3, #videos h4 {
+  margin: 0;
+  margin-top: 10px; }
+
+#videos h4 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d1d1d1;
+  padding-bottom: 10px;
+  color: #777;
+  text-transform: uppercase;
+  font-size: 12px; }
+
+#videos .thumb, #videos .info {
+  display: inline-block; }
+
+#videos .thumb {
+  float: left; }
+
+#videos .info {
+  width: 160px;
+  padding-left: 10px; }
 
 /*# sourceMappingURL=app.css.map */

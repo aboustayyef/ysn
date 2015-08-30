@@ -1,0 +1,32 @@
+#blogposts{
+
+	ul{
+		padding:8px;
+		margin:0;
+		font-size:14px;
+	}
+
+	li{
+		list-style-type:none;
+		&:last-child{
+			h4{
+				border:none;
+			}
+		}
+	}
+
+	h3,h4{
+		margin:0;
+		margin-top:10px;
+	}
+
+	h4{
+	    margin-bottom: 10px;
+	    border-bottom: 1px solid #d1d1d1;
+	    padding-bottom: 10px;
+	    color: #777;
+	    text-transform: uppercase;
+	    font-size: 12px;
+	}
+
+}
