@@ -3,7 +3,7 @@
 		@if(isset($post->image_source))
 			<?php $heighttowidth = $post->image_height / $post->image_width; ?>
 			<div class="imagecontainer">
-				<img src="{{$post->image_source}}" width="298" height = "{{298 * $heighttowidth}}">
+				<a href="{{$post->getLink()}}"><img src="{{$post->image_source}}" width="298" height = "{{298 * $heighttowidth}}"></a>
 			</div>
 		@endif
 
