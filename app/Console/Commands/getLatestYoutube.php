@@ -38,8 +38,8 @@ class GetLatestYoutube extends Command
      */
     public function handle()
     {
-        $listOfTerms = ['youstink', 'طلعت ريحتكم'];
-        $resultsPerTerm = 2;
+        $listOfTerms = ['طلعت ريحتكم'];
+        $resultsPerTerm = 5;
 
         foreach ($listOfTerms as $key => $term) {
             $posts = Youtube::searchVideos($term, $resultsPerTerm, 'date');
