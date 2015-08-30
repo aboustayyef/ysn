@@ -12,8 +12,8 @@
                 </li>
             </ul>
         </nav>
-
-        <br>Questions? Ask <a href="https://twitter.com/beirutspring">@beirutspring</a><sup>*</sup>       
+        <span style="font-size:12px; opacity:0.4">Content is updated every 5 minutes</span>
+        <br>&nbsp;<br>Questions? Ask <a href="https://twitter.com/beirutspring">@beirutspring</a><sup>*</sup>       
 
     </div>
 </div>
