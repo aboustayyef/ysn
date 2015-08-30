@@ -17,4 +17,6 @@ $posts = \Cache::get('lastThirtyPosts');
         @include('partials.card')
     @endforeach
 
+	@include('partials.bookend')
+
 </div>
