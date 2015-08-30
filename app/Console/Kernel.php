@@ -14,8 +14,6 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\Inspire::class,
-        \App\Console\Commands\Test::class,
-        \App\Console\Commands\Test2::class,
         \App\Console\Commands\getLatestPosts::class,
         \App\Console\Commands\getLatestYoutube::class,
 
