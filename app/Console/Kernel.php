@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('inspire')
-                 ->hourly();
+        $schedule->command('posts:get')->everyFiveMinutes();
+        $schedule->command('youtube:get')->everyFiveMinutes();
     }
 }
