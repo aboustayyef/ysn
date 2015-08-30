@@ -34,6 +34,8 @@ h3 {
 .sidebar {
   background: #385228;
   color: #fff; }
+  .sidebar a h1 {
+    color: white; }
 
 .brand-title,
 .brand-tagline {
