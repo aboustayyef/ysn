@@ -16,7 +16,7 @@
 				<span class="time"><a href="{{$post->getLink()}}">{{(new \Carbon\Carbon($post->date_published))->diffForHumans()}}</a></span>
 			</div>
 			<div class="provider">
-				<img src="{{Asset('img/icons/' . $post->provider . '.png')}}" width="30px" height="30px">
+				<img src="{{Asset('img/icons/' . $post->provider . '.png')}}" width="40px" height="40px">
 			</div>
 		</div>
 	</div>

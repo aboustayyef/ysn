@@ -38,6 +38,9 @@
 
 	.userImage{
 		float:left;
+		img{
+			border-radius:5px;
+		}
 	}
 	
 	.userInfo{
@@ -45,7 +48,9 @@
 	}
 
 	.provider{
+		opacity:0.8;
 		float:right;
+		margin-top:5px;
 	}
 
 

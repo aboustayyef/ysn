@@ -141,10 +141,14 @@ h3 {
     display: inline-block; }
   .card .userImage {
     float: left; }
+    .card .userImage img {
+      border-radius: 5px; }
   .card .userInfo {
     margin-left: 10px; }
   .card .provider {
-    float: right; }
+    opacity: 0.8;
+    float: right;
+    margin-top: 5px; }
 
 a.primaryButton {
   padding: 5px 11px;
