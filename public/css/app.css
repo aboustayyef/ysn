@@ -157,9 +157,11 @@ h3 {
     color: white; }
     .card.green h4 a {
       background-color: #C4F7B8;
-      padding: 5px 20px;
+      padding: 10px 20px;
       border-radius: 5px;
       color: #4D5648; }
+    .card.green p {
+      opacity: 0.6; }
 
 a.primaryButton {
   padding: 5px 11px;
