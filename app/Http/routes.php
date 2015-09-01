@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('layout');
 });
+
+Route::get('updateme/{id}', function($id){
+	$response = ['posts' => App\Post::numberOfPostsSinceId($id)];
+	return response()->json($response);
+});

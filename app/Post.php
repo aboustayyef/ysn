@@ -23,4 +23,9 @@ class Post extends Model
 		return 'https://twitter.com/' . $this->user_name . '/status/' . $this->post_id;
 
 	}
+
+	public static function numberOfPostsSinceId($id){
+		$dateOfLastPost = Post::findOrFail($id)->date_published;
+		return Post::where('date_published','>',$dateOfLastPost)->get()->count();
+	}
 }

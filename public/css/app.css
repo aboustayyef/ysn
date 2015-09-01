@@ -226,4 +226,20 @@ a.primaryButton {
   width: 160px;
   padding-left: 10px; }
 
+#newPostsAvailable {
+  position: fixed;
+  top: -100px;
+  width: 280px;
+  margin: auto;
+  left: 10px;
+  padding: 10px;
+  background-color: #EAC84B;
+  color: black;
+  border: 1px solid #DADAAB;
+  transition: 0.2s; }
+  #newPostsAvailable.active {
+    top: 10px; }
+  #newPostsAvailable a {
+    color: #AF0909; }
+
 /*# sourceMappingURL=app.css.map */

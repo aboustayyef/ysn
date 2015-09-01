@@ -1,0 +1,18 @@
+#newPostsAvailable{
+    position: fixed;
+    top: -100px;
+    width: 280px;
+    margin: auto;
+    left: 10px;
+    padding: 10px;
+    background-color: #EAC84B;
+    color: black;
+    border:1px solid #DADAAB;
+	transition: 0.2s;
+	&.active{
+		top:10px;
+	}
+	a{
+		color:#AF0909;
+	}
+}
