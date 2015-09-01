@@ -23,7 +23,7 @@
 				if (! $('#newPostsAvailable').hasClass('active') ) {
 					$('#newPostsAvailable').addClass('active')
 				};
-				document.title = '(' + YouStinkApp.newPostsAvailable + ')' + 'YouStink News';
+				document.title = '(' + YouStinkApp.newPostsAvailable + ')' + ' YouStink News';
 			};
 		}
 
