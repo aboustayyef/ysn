@@ -14,6 +14,10 @@ class InstagramTransformer extends _Transformer{
 		return $this->rawPost->link;
 	}
 	
+	function isPopular($threshold = 20){
+		return $this->rawPost->likes->count > $threshold ;
+	}
+
 	function getImageSource(){
 		$this->image = $this->rawPost->images->low_resolution->url;
 		if ($this->image) {

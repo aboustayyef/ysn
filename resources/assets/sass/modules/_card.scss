@@ -21,15 +21,18 @@
 	img{
 		max-width:100%;
 		background-color:#CFE0CB;
+		border-bottom:1px solid #E8E7E7;
 	}
 	p{
 		padding:10px;
 	}
 
 	.userMeta{
-		padding:5px;
+		border-top:1px solid #E8E7E7;
+		padding:10px;
 		font-size:12px;
 		overflow:auto;
+		background-color:#F1F1F1;
 	}
 
 	.userImage, .userInfo, .provider{
@@ -40,6 +43,7 @@
 		float:left;
 		img{
 			border-radius:5px;
+			background:white;
 		}
 	}
 	
@@ -51,6 +55,9 @@
 		opacity:0.8;
 		float:right;
 		margin-top:5px;
+		img{
+			border-radius:50%;
+		}
 	}
 
 
@@ -69,4 +76,9 @@
 	}
 	}
 
+
+	&.autofloat{
+		float:left;
+		margin-right:10px;
+	}
 }

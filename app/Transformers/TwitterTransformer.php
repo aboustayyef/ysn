@@ -25,6 +25,11 @@ class TwitterTransformer extends _Transformer{
 
 	}
 
+	function isPopular($threshold = 3){
+		// add canonicalTweet retweets and canonicalTweetFavorites
+		return (($this->canonicalTweet->retweet_count + $this->canonicalTweet->favorite_count) >= $threshold );
+	}
+
 	function getPostId(){
 		return $this->canonicalTweet->id;
 	}

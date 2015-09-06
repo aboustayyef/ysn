@@ -1,14 +1,3 @@
-<?php 
-
-// prepare posts. Cache if no cache
-if (! \Cache::has('lastThirtyPosts')) {
-    \Cache::put('lastThirtyPosts' , \App\Post::orderBy('date_published','DESC')->take(30)->get() , 3);
-}
-
-$posts = \Cache::get('lastThirtyPosts');
-
-?>
-
 <script type="text/javascript">
 	
 	// store ID of latest post
@@ -16,15 +5,16 @@ $posts = \Cache::get('lastThirtyPosts');
 
 </script>
 
+<div class="posts">
 
-<div class="posts js-masonry" data-masonry-options='{ "itemSelector": ".cardsWrapper", "columWidth": 300, "gutter":10 }'>  
-   
-	@include('partials.blogs_and_videos')
+	@include('partials.sourceControl')
+	<div id="stream" class="js-masonry" data-masonry-options='{ "itemSelector": ".cardsWrapper", "columWidth": 300, "gutter":10 }'>  
 
-    @foreach($posts as $post)
-        @include('partials.card')
-    @endforeach
+	    @foreach($posts as $post)
+	        @include('partials.card')
+	    @endforeach
 
-	@include('partials.bookend')
+		@include('partials.bookend')
 
+	</div>
 </div>

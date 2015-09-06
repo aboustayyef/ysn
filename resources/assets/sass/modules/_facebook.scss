@@ -1,0 +1,20 @@
+#facebook{
+	text-align:right;
+	img{
+		margin:10px;
+	}
+	p{
+		margin:0;
+		overflow:auto;
+	}
+	a{
+		float:left;
+		color: #49649F;
+	}
+	&.card{
+		h2{
+			background-color:#49649F;
+			text-align:left;
+		}
+	}
+}

@@ -12,10 +12,7 @@
                     <a class="pure-button" href="http://youstink.org">Official Page</a>
                 </li>
                 <li class="nav-item">
-                    <a class="pure-button" href="https://www.indiegogo.com/projects/tol3et-re7etkom">Support YouStink</a>
-                </li>
-                <li class="nav-item">
-                    <a class="pure-button" href="http://youstink.org/report.html">Financials</a>
+                    <a class="pure-button" href="/">Refresh Posts</a>
                 </li>
             </ul>
         </nav>

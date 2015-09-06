@@ -17,12 +17,11 @@ class FacebookGetter
 	public function getList(){
 
 		$this->posts = $this->client->get('/tol3etre7etkom/posts')->getDecodedBody();
-
 		return $this->posts['data'];
 	}
 
 	public function getItem($id){
-		$this->item = $this->client->get($id . '?fields=id,message,created_time,link,picture,status_type')->getDecodedBody();
+		$this->item = $this->client->get($id . '?fields=id,message,created_time,link,picture,attachments,status_type')->getDecodedBody();
 		return $this->item;
 	}
 
