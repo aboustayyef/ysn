@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
 <![endif]-->
 <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="{{Asset('css/app.css?v=1.01')}}">
+    <link rel="stylesheet" href="{{Asset('css/app.css?v=1.1')}}">
 <!--<![endif]-->
   
 </head>
