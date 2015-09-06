@@ -10,10 +10,21 @@ h2 .source{
 			opacity:1;
 		}
 	}
+	&.title{
+		display:none;
+	}
 	&.active{
 		img{
 			opacity:1;
 		}
 	}
 
+}
+
+@media (min-width: 48em) {
+	h2 .source{
+		&.title{
+			display:inline-block;
+		}
+	}
 }

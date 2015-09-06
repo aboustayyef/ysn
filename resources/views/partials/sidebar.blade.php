@@ -12,7 +12,7 @@
                     <a class="pure-button" href="http://youstink.org">Official Page</a>
                 </li>
                 <li class="nav-item">
-                    <a class="pure-button" href="/">Refresh Posts</a>
+                    <a class="pure-button" href="/{{$provider}}">Refresh Posts</a>
                 </li>
             </ul>
         </nav>

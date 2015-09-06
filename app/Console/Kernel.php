@@ -26,6 +26,5 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('posts:get')->everyFiveMinutes();
-        $schedule->command('youtube:get')->everyFiveMinutes();
     }
 }

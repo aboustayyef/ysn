@@ -58,10 +58,13 @@ class getLatestPosts extends Command
         foreach ($this->hashtags as $key => $hashtag) {
             
             /*
-            * get Facebook posts. Get them only once, because not related to hashtags
-            * 
+            * get Facebook & Lebanese Blogs posts. Get them only once, because not related to hashtags
             */
             
+            /////////////
+            //Facebook //
+            /////////////
+
             if ($key == 0) {
 
                 $facebookGetter = new \App\Getters\FacebookGetter;
@@ -80,8 +83,28 @@ class getLatestPosts extends Command
                         Post::create($currentPost);
                     }                
                 }
-            }
 
+                ///////////////////
+                //Lebanese Blogs //
+                ///////////////////
+
+                $lebaneseBlogsGetter = new \App\Getters\LebaneseBlogsGetter;
+
+                $this->info('Getting Lebanese blogs posts');
+                $posts = $lebaneseBlogsGetter->getList();
+
+                // transform posts
+                foreach ($posts as $key => $post) {
+                    $lebaneseBlogsTransformer = new \App\Transformers\LebaneseBlogsTransformer($post);
+                    
+                    $currentPost = $lebaneseBlogsTransformer->get();
+                    
+                    // store if it doesn't already exist
+                    if (! Post::has($currentPost['post_id'])) {
+                        Post::create($currentPost);
+                    }                
+                }
+            }
 
             $this->comment("Gathering posts for hastag $hashtag");
 

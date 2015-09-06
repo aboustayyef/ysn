@@ -17,9 +17,9 @@ Route::get('updateme/{id}', function($id){
 });
 
 Route::get('dumper', function(){
-	$getter = new \App\Getters\FacebookGetter;
+	$getter = new \App\Getters\LebaneseBlogsGetter;
 	$post = $getter->getList()[0];
-	$post = (new \App\Transformers\FacebookTransformer($post))->get();
+	$post = (new \App\Transformers\LebaneseBlogsTransformer($post))->get();
 	return $post;
 });
 

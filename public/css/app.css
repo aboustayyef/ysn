@@ -215,8 +215,34 @@ h2 .source {
     margin-bottom: -9px; }
     h2 .source img:hover {
       opacity: 1; }
+  h2 .source.title {
+    display: none; }
   h2 .source.active img {
     opacity: 1; }
+
+@media (min-width: 48em) {
+  h2 .source.title {
+    display: inline-block; } }
+
+#whatsnew {
+  padding-bottom: 20px; }
+  #whatsnew h3 {
+    margin: 0;
+    padding: 8px 15px;
+    background-color: #DFF3D3; }
+  #whatsnew li {
+    font-size: 14px;
+    padding-right: 25px;
+    margin-top: 9px;
+    color: #6D6D6D; }
+  #whatsnew a.button {
+    margin-top: 10px;
+    margin-left: 38px;
+    color: white;
+    padding: 8px;
+    background-color: #71B547;
+    display: block;
+    width: 150px; }
 
 #newPostsAvailable {
   position: fixed;

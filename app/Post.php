@@ -20,11 +20,12 @@ class Post extends Model
 		if ($this->provider == 'instagram') {
 			return $this->post_id;
 		}
-
 		if ($this->provider == 'youtube') {
 			return 'https://www.youtube.com/watch?v=' . $this->post_id;
 		}
-
+		if ($this->provider == 'lebaneseblogs') {
+			return 'http://' . $this->post_id;
+		}
 		if ($this->provider == 'facebook'){
 			return 'https://www.facebook.com/'. $this->post_id;
 		}
