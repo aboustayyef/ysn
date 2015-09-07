@@ -33,7 +33,7 @@ class getLatestPosts extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->hashtags = ['بدنا_نحاسب', 'youstink'];
+        $this->hashtags = ['#بدنا_نحاسب', '#youstink'];
         $this->postsPerHashtag = 30; // increased from 15 to 30 because of quality filtering
     }
 
@@ -112,7 +112,7 @@ class getLatestPosts extends Command
              * get youtube posts
              */
 
-            $ignoredHashtags = ['youstink'];
+            $ignoredHashtags = ['#youstink'];
     
             if (! in_array($hashtag, $ignoredHashtags)) {
                 $youtubeGetter = new \App\Getters\YoutubeGetter;
@@ -149,7 +149,7 @@ class getLatestPosts extends Command
                 $twitterTransformer = new \App\Transformers\TwitterTransformer($tweet);
 
                 // should pass popularity test
-                $popularityThreshold = 1 ; //minimum retweets and favorites (combined)
+                $popularityThreshold = 2 ; //minimum retweets and favorites (combined)
                 
                 if ($twitterTransformer->isPopular($popularityThreshold)) {
                     $currentTweet = $twitterTransformer->get();
