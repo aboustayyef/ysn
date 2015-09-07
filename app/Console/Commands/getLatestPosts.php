@@ -167,7 +167,10 @@ class getLatestPosts extends Command
 
             $this->info('getting instagram Posts');
 
-            $posts = $instagramGetter->getList($hashtag, $this->postsPerHashtag);
+            // remove # for instagram search
+            $nohashtag = ltrim($hashtag,'#');
+
+            $posts = $instagramGetter->getList($nohashtag, $this->postsPerHashtag);
 
             // transform posts
             foreach ($posts as $key => $post) {
