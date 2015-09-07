@@ -13,7 +13,7 @@ class InstagramGetter
 		$this->client = new Instagram(env('INSTAGRAM_APP_ID'));
 	}
 
-	public function getList($tag="youstink" , $howmany=10){
+	public function getList($howmany=10, $tag="youstink"){
 
 		$this->posts = $this->client->getTagMedia(urlencode($tag), $howmany);
 

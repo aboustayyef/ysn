@@ -32,7 +32,7 @@ class LebaneseBlogsTransformer extends _Transformer{
 	}
 	
 	function getHtmlContent(){
-		return nl2br($this->rawPost->post_excerpt);
+		return nl2br($this->rawPost->post_title);
 	}
 	
 	function getUserProfilePic(){

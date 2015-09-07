@@ -47,14 +47,14 @@ Class TweetContentParser{
 		$content = preg_replace("#@(\\w+)#", "<a href=\"http://twitter.com/$1\">@$1</a>", $content);
 
 		// replace #Hashtags with twitter links to hashtags
-		if(count($this->canonicalTweet->entities->hashtags) > 0){
+		// if(count($this->canonicalTweet->entities->hashtags) > 0){
 
-			foreach ($this->canonicalTweet->entities->hashtags as $key => $hashtag) {
+		// 	foreach ($this->canonicalTweet->entities->hashtags as $key => $hashtag) {
 
-				$content = preg_replace('#('.$hashtag->text.')#', "<a href=\"http://twitter.com/hashtag/$1\">$1</a>", $content);
+		// 		$content = preg_replace('#('.$hashtag->text.')#', "<a href=\"http://twitter.com/hashtag/$1\">$1</a>", $content);
 
-			}
-		}
+		// 	}
+		// }
 
 		//convert everything to utf8 (see dependency above)
 		//$content = Encoding::toUTF8($content);

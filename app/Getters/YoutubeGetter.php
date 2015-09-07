@@ -13,7 +13,7 @@ class YoutubeGetter
 		#nothing
 	}
 
-	public function getList( $hashtag = 'youstink' , $howmany = 5){
+	public function getList( $howmany = 5, $hashtag = 'youstink' ){
 
 		$posts = Youtube::searchVideos($hashtag, $howmany, 'date');
 		return $posts ;

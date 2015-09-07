@@ -13,7 +13,7 @@ class TwitterGetter
 		$this->client = new Twitter(getenv('TWITTER_CONSUMER_KEY'), getenv('TWITTER_CONSUMER_SECRET'), getenv('TWITTER_ACCESS_TOKEN'),getenv('TWITTER_ACCESS_TOKEN_SECRET'));
 	}
 
-	public function getList($tag="youstink" , $howmany=10){
+	public function getList($howmany=10, $tag="youstink"){
 
 		try {
 				$rawTweets = $this->client->request('search/tweets','GET',['q'=>$tag, 'count'=>$howmany]);
