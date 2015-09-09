@@ -27,8 +27,9 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('posts:get Youtube 20 طلعت+ريحتكم')->everyFiveMinutes();
         $schedule->command('posts:get Youtube 20 بدنا+نحاسب')->everyFiveMinutes();
-        $schedule->command('posts:get Twitter 20 \#youstink 1')->everyFiveMinutes();
+        $schedule->command('posts:get Twitter 20 \#youstink 2')->everyFiveMinutes();
         $schedule->command('posts:get Twitter 20 بدنا_نحاسب 1')->everyFiveMinutes();
+        $schedule->command('posts:get Twitter 20 طلعت_ريحتكم 3')->everyFiveMinutes();
         $schedule->command('posts:get LebaneseBlogs 20')->everyFiveMinutes();
         $schedule->command('posts:get Facebook 20')->everyFiveMinutes();
         $schedule->command('posts:get Instagram 20 youstink 20')->everyFiveMinutes();
