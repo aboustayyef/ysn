@@ -1,6 +1,6 @@
 <div class="cardsWrapper">
 	<div class="card">
-		@if(isset($post->image_source))
+		@if(isset($post->image_source) && $post->image_width > 0 )
 			<?php $heighttowidth = $post->image_height / $post->image_width; ?>
 			<div class="imagecontainer">
 				<a href="{{$post->getLink()}}"><img src="{{$post->image_source}}" width="298" height = "{{298 * $heighttowidth}}"></a>
